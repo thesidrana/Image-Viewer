@@ -6,11 +6,11 @@ root.title('Image Viewer')
 root.config(bg="black")
 #root.iconbitmap('C:/Users/thesi/Desktop/PROG/Python Prog/Tkinter/firefox.ico')
 
-my_img1 = ImageTk.PhotoImage(Image.open("images/Abbey.jpg"))
-my_img2 = ImageTk.PhotoImage(Image.open("images/revolver.jpg"))
-my_img3 = ImageTk.PhotoImage(Image.open("images/SgtPepper.jpg"))
-my_img4 = ImageTk.PhotoImage(Image.open("images/white.jpg"))
-my_img5 = ImageTk.PhotoImage(Image.open("images/Yellow.jpg"))
+my_img1 = ImageTk.PhotoImage(Image.open("Abbey.jpg"))
+my_img2 = ImageTk.PhotoImage(Image.open("revolver.jpg"))
+my_img3 = ImageTk.PhotoImage(Image.open("SgtPepper.jpg"))
+my_img4 = ImageTk.PhotoImage(Image.open("white.jpg"))
+my_img5 = ImageTk.PhotoImage(Image.open("Yellow.jpg"))
 
 image_list=[my_img1,my_img2,my_img3,my_img4,my_img5]
 
