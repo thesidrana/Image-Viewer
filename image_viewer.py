@@ -14,6 +14,8 @@ my_img5 = ImageTk.PhotoImage(Image.open("Yellow.jpg"))
 
 image_list=[my_img1,my_img2,my_img3,my_img4,my_img5]
 
+status = Label(root, text="Image 1 of "+str(len(image_list)), bd=1, relief=SUNKEN,anchor=E)
+
 my_lbl = Label(image=my_img1)
 my_lbl.grid(row=0,column=0,columnspan=3,padx=10,pady=30)
 #my_lbl.config()
@@ -37,6 +39,8 @@ def forward(image_number):
 	button_forward.grid(row=1,column=2)
 	my_lbl.grid(row=0,column=0,columnspan=3,padx=10,pady=30)
 	#my_lbl.config(padx=10,pady=30)
+	status = Label(root, text="Image "+str(image_number)+" of "+str(len(image_list)), bd=1, relief=SUNKEN,anchor=E)
+	status.grid(row=2,column=0,columnspan=3,sticky=E+W)
 
 	return
 
@@ -60,6 +64,8 @@ def back(image_number):
 	button_forward.grid(row=1,column=2)
 	my_lbl.grid(row=0,column=0,columnspan=3,padx=10,pady=30)
 	#my_lbl.config(padx=10,pady=30)
+	status = Label(root, text="Image "+str(image_number)+" of "+str(len(image_list)), bd=1, relief=SUNKEN,anchor=E)
+	status.grid(row=2,column=0,columnspan=3,sticky=E+W)
 	return	
 
 button_back=Button(root,text="<<",command=back,state=DISABLED,width=5)
@@ -73,5 +79,6 @@ button_exit.config(bg="#85898d",fg="black")
 button_back.grid(row=1,column=0)
 button_exit.grid(row=1,column=1)
 button_forward.grid(row=1,column=2)
+status.grid(row=2,column=0,columnspan=3,sticky=E+W)
 
 root.mainloop()
